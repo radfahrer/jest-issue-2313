@@ -1,0 +1,41 @@
+{
+  "name": "jest-break-test",
+  "version": "1.0.0",
+  "description": "replicates jest breakage",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest-cli": "^17.0.3"
+  },
+  "jest": {
+    "automock": "true",
+    "rootDir": "src",
+    "coverageDirectory": "<rootDir>/../coverage/jest",
+    "coverageReporters": [
+      "lcov",
+      "json"
+    ],
+    "collectCoverage": "true",
+    "testEnvironment": "node",
+    "resetModules": "true",
+    "unmockedModulePathPatterns": [
+      "moment",
+      "underscore",
+      "wrappy",
+      "\\bnode_modules/util\\b",
+      "depd",
+      "uuid",
+      "node_modules/express",
+      "deep-extend",
+      "test/mock",
+      "node_modules/clone"
+    ]
+  },
+  "dependencies": {
+    "dustjs-linkedin": "^2.7.5"
+  }
+}
